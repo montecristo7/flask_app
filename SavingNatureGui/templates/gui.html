@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     <meta charset = "utf-8" />
+     <title>Animal Classification</title> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                background-color:white;
+            }
+            
+        body {
+            font-family: 'monospace';
+            font-size: 16px;
+            }
+        
+        /*
+        .form{
+            display:grid;
+            grid-template-columns: auto auto;
+            grid-gap:10px;
+            justify-items: center;
+        }*/
+        
+        .btn-group input{
+            background-color: lightgray; /* Green background */
+            color: black; /* White text */
+            padding: 10px;
+            cursor: pointer; /* Pointer/hand icon */
+            margin: 20px;
+            /*flex-direction: row;*/
+            }
+        /*
+        #class{
+            grid-area: 2/1/3/2;
+        }
+        
+        #species{
+            grid-area: 3/1/4/2;
+        }
+        #model_progress{
+            grid-area: 1/2/4/3;
+            margin: 20px;
+        }*/
+ 
+    </style>
+   
+    </head>
+    <body>
+        <div class="btn-group">
+            <form action="/model" method="POST">
+                <input type="submit" name="submit_button" value="binary">
+                <input type="submit" name="submit_button" value="class">
+                <input type="submit" name="submit_button" value="species">
+            </form>
+        </div>
+        <div class="show-data" >
+        </div>
+         <script>
+
+        /*     
+        function binaryFunc(){
+            
+        }     
+                $(function () {
+        $('#control_panel').on('submit', function (e) {
+            e.preventDefault();
+
+            var form = $(this)[0];
+            var formData = new FormData(form);
+
+            $.ajax({
+                url: '/?button_res',
+                method: 'GET',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    console.log(data);
+                    document.getElementById('model_result').innerText = data;
+                }
+            });
+        });
+    });*/
+        </script>   
+    </body>
+</html>
