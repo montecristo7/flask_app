@@ -9,6 +9,6 @@ python3 -m venv venv
 
  . venv/bin/activate
 
-pip install Flask
+pip install Flask  
 export FLASK_APP=hello.py  
 flask run
