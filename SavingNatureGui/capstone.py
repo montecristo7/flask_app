@@ -1,6 +1,7 @@
 from flask import Flask,escape, request,render_template,jsonify
 import flask
 import time
+from model_prediction import model_predict
 
 app = Flask(__name__)
 
@@ -31,15 +32,16 @@ def choose_type():
          
         
         def inner():
-            if text == "binary":
-                yield " Binary model starts running... \n "
-            elif text == "class":
-                yield "Class model starts running... \n"
-            elif text == "species":
-                yield "Species model starts running... \n "
-            for x in range(10):
-                time.sleep(1)
-                yield f"Running currently {x}s \n "
+            # if text == "binary":
+                # yield " Binary model starts running... \n "
+            # elif text == "class":
+                # yield "Class model starts running... \n"
+            # elif text == "species":
+                # yield "Species model starts running... \n "
+            # for x in range(10):
+                # time.sleep(1)
+                # yield f"Running currently {x}s \n "
+            return model_predict(text)
                 
         return flask.Response(inner(), mimetype='text/html')
 
